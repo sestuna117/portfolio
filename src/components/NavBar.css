@@ -1,5 +1,5 @@
 .nav-bar {
-    background: #000;
+    background: #111;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,6 +10,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 40px;
+    color: #946adc;
 }
 
 .nav-bar-list {

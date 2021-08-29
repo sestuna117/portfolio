@@ -1,0 +1,38 @@
+.about-skills-list {
+    column-count: 3;
+    column-width: 180px;
+    padding-left: 20px;
+}
+
+.about-skill {
+}
+
+.about-ed-list {
+    padding: 0;
+    list-style: none;
+}
+
+.about-ed-school-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-ed-school-header:last-child {
+    border-bottom: #f8f8f8 1px solid;
+}
+
+.about-ed-school-header h4 {
+    margin: 0 0 0 10px;
+}
+
+.about-ed-course-header {
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.about-ed-course-list, .about-ed-school-header span {
+    font-size: 16px;
+}

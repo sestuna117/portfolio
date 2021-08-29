@@ -3,7 +3,7 @@
     padding: 0 15px;
     display: flex;
     position: relative;
-    background: #000;
+    background: #111;
     z-index: 1;
 }
 
@@ -19,11 +19,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(
-            to bottom,
-            #000000,
-            #30323d
-    );
+    background-image: linear-gradient(to bottom, #111, #30323d);
     z-index: -1;
     transition: opacity 0.2s linear;
     opacity: 0;

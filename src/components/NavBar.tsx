@@ -16,9 +16,9 @@ export default function NavBar() {
       </NavLink>
       <ul className="nav-bar-list">
         {/*<NavBarLink exact={true} to={"/"} name={"Home"} />*/}
-        <NavBarLink to={"/about"} name={"About"} />
+        <NavBarLink to={"/about"} name={"About Me"} />
         <NavBarLink to={"/projects"} name={"Projects"} />
-        <NavBarLink to={"/resume"} name={"Resume"} />
+        {/*<NavBarLink to={"/resume"} name={"Resume"} />*/}
         <NavBarLink to={"/contact"} name={"Contact"} />
       </ul>
     </nav>

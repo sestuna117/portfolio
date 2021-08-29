@@ -19,9 +19,9 @@ function App() {
           <Route path="/projects">
             <Users />
           </Route>
-          <Route path="/resume">
-            <Users />
-          </Route>
+          {/*<Route path="/resume">*/}
+          {/*  <Users />*/}
+          {/*</Route>*/}
           <Route path="/contact">
             <Users />
           </Route>
