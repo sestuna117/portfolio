@@ -27,7 +27,9 @@ export default function HomePage() {
               </span>
             </NavLink>
           </div>
-          <img className="home-images" src={Collage} alt={"artwork_prev"} />
+          <div className="home-images-container">
+            <img className="home-images" src={Collage} alt={"artwork_prev"} />
+          </div>
         </div>
         <Links />
       </div>

@@ -1,5 +1,5 @@
 .home-page p {
-    margin: 10px 10px 10px 40px;
+    margin: 5px 10px 5px 40px;
 }
 
 .home-content {
@@ -7,12 +7,7 @@
     align-items: center;
 }
 
-.home-text, .home-images {
-    width: 50%;
-}
-
-.home-images {
-    opacity: 0.8;
+.home-text, .home-images-container {
     width: 50%;
 }
 
@@ -31,4 +26,17 @@
 
 .home-page .learn-more {
     margin-left: 50px;
+}
+
+.home-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-images {
+    opacity: 0.8;
+    width: 100%;
+    animation-fill-mode: both;
 }
