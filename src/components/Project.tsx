@@ -1,22 +1,25 @@
 import React, { PropsWithChildren, useState } from "react";
 import Overlay from "./projects/Overlay";
+import "./Project.css";
 import { IoIosArrowForward } from "react-icons/all";
 
 export type LinkDetail = {
   name: string;
   desc: string;
+  logo: string;
   img: string;
   OverlayComponent: JSX.Element;
 };
 
 export default function Project(props: PropsWithChildren<LinkDetail>) {
-  const { name, img, desc, OverlayComponent } = props;
+  const { name, img, logo, desc, OverlayComponent } = props;
   const [overlayOn, setOverlayOn] = useState(false);
 
   return (
     <div>
       <div className="project-box">
         <div className="project-desc">
+          <img className="project-logo" src={logo} alt={name} />
           <div
             className="project-name"
             onClick={() => {
@@ -34,6 +37,7 @@ export default function Project(props: PropsWithChildren<LinkDetail>) {
               {desc}
             </p>
             <p
+              className="project-learn-more"
               onClick={() => {
                 setOverlayOn(true);
               }}

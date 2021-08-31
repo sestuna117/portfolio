@@ -20,7 +20,7 @@
     background: #282c34;
     border-radius: 10px;
     width: 80%;
-    margin-top: 100px;
+    margin: 60px;
     overflow: scroll;
     overflow-x: auto;
     padding-top: 20px;
@@ -44,6 +44,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.overlay-content p {
+    text-align: center;
+    width: 80%;
 }
 
 .overlay-exit-button {
@@ -95,7 +100,11 @@
     transition: opacity 300ms;
 }
 
-.alert-exit-active .overlay-content {
+.alert-exit-active .overlay {
     transform: scale(0.9);
     transition: transform 300ms;
+}
+
+.overlay-content .project-title, .overlay-content .project-summary {
+    margin: 5px;
 }
