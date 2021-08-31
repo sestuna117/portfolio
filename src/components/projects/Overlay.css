@@ -108,3 +108,7 @@
 .overlay-content .project-title, .overlay-content .project-summary {
     margin: 5px;
 }
+
+.overlay-content .project-logo {
+    width: 200px;
+}

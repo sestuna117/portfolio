@@ -12,7 +12,7 @@ export default function NavBar() {
         to="/"
         activeClassName="selected"
       >
-        Portfolio
+        Shio Chio
       </NavLink>
       <ul className="nav-bar-list">
         {/*<NavBarLink exact={true} to={"/"} name={"Home"} />*/}

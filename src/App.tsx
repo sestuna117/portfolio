@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import AboutPage from "./components/about/AboutPage";
 import ProjectsPage from "./components/projects/ProjectsPage";
 import HomePage from "./components/home/HomePage";
+import ContactPage from "./components/contact/ContactPage";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <ProjectsPage />
           </Route>
           <Route path="/contact">
-            <Users />
+            <ContactPage />
           </Route>
           <Route path="/">
             <HomePage />
@@ -28,10 +29,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
 
 export default App;
