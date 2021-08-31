@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./Page.css";
+import "../Page.css";
 import "./ProjectsPage.css";
-import tcPlayer from "../imgs/thinking-cap/tc-player.png";
-import tcLogo from "../imgs/thinking-cap/tc-logo.png";
-import ThinkingCapOverlay from "./projects/ThinkingCapOverlay";
+import tcPlayer from "../../imgs/thinking-cap/tc-player.png";
+import tcLogo from "../../imgs/thinking-cap/tc-logo.png";
+import ThinkingCapOverlay from "./project-overlays/ThinkingCapOverlay";
 import Project from "./Project";
 
 const PROJECTS = [

@@ -47,3 +47,13 @@
         opacity: 1;
     }
 }
+
+.learn-more {
+    color: #946adc;
+    font-weight: bold;
+}
+
+.learn-more-arrow {
+    position: relative;
+    top: 2px;
+}

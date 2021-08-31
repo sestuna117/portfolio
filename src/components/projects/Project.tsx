@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, useState } from "react";
-import Overlay from "./projects/Overlay";
+import Overlay from "./Overlay";
 import "./Project.css";
 import { IoIosArrowForward } from "react-icons/all";
 
@@ -37,7 +37,7 @@ export default function Project(props: PropsWithChildren<LinkDetail>) {
               {desc}
             </p>
             <p
-              className="project-learn-more"
+              className="learn-more"
               onClick={() => {
                 setOverlayOn(true);
               }}

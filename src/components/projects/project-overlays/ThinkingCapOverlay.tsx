@@ -1,14 +1,14 @@
 import React from "react";
-import "./Overlay.css";
+import "../Overlay.css";
 import "./ThinkingCapOverlay.css";
-import tcPlayer from "../../imgs/thinking-cap/tc-player.png";
-import tcAnalytics from "../../imgs/thinking-cap/tc-analytics.png";
-import tcBuilds from "../../imgs/thinking-cap/tc-builds.png";
-import tcMatch from "../../imgs/thinking-cap/tc-full-match.png";
-import tcHome from "../../imgs/thinking-cap/tc-home.png";
-import tcMHome from "../../imgs/thinking-cap/tc-mobile-home.png";
-import tcMPlayer from "../../imgs/thinking-cap/tc-mobile-player.png";
-import tcLogo from "../../imgs/thinking-cap/tc-logo.png"
+import tcPlayer from "../../../imgs/thinking-cap/tc-player.png";
+import tcAnalytics from "../../../imgs/thinking-cap/tc-analytics.png";
+import tcBuilds from "../../../imgs/thinking-cap/tc-builds.png";
+import tcMatch from "../../../imgs/thinking-cap/tc-full-match.png";
+import tcHome from "../../../imgs/thinking-cap/tc-home.png";
+import tcMHome from "../../../imgs/thinking-cap/tc-mobile-home.png";
+import tcMPlayer from "../../../imgs/thinking-cap/tc-mobile-player.png";
+import tcLogo from "../../../imgs/thinking-cap/tc-logo.png"
 
 export default function ThinkingCapOverlay() {
   return (

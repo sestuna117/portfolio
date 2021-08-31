@@ -1,5 +1,5 @@
 import React from "react";
-import "./Page.css";
+import "../Page.css";
 import "./AboutPage.css";
 
 const SKILLS_LIST = [
@@ -41,6 +41,16 @@ export default function AboutPage() {
             I enjoy playing games and drawing. If I'm not doing one of those
             things, I'm likely think up about what I wanna try building for my
             next project.
+          </p>
+          <p>
+            I first got onto web development during my junior year in university
+            when my friend/mentor of sorts (you know who you are) convinced me
+            to try developing something that I could actually use or enjoy. Thus
+            I decided to make a stat tracker site for the popular MOBA game
+            League of Legends. While developing my first site, I learned of the
+            instance gratification that web development could give you, and it
+            helped motivate me even more to continue. Since then I've been
+            hooked on making websites and pages.
           </p>
         </div>
         <div className="content-header">

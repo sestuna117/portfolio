@@ -42,16 +42,6 @@
     font-size: 14px;
 }
 
-.project-learn-more {
-    color: #946adc;
-    font-weight: bold;
-}
-
-.learn-more-arrow {
-    position: relative;
-    top: 2px;
-}
-
 .project-preview {
     width: 45%;
     transition: transform 0.3s ease-in-out;
