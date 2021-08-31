@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Page.css";
 import "./ProjectsPage.css";
-import tcHome from "../imgs/tc-player.png";
+import tcPlayer from "../imgs/thinking-cap/tc-player.png";
 import ThinkingCapOverlay from "./projects/ThinkingCapOverlay";
 import Project from "./Project";
 
@@ -9,7 +9,7 @@ const PROJECTS = [
   {
     name: "Thinking Cap",
     desc: "A League of Legends stats tracker using Riots API",
-    img: tcHome,
+    img: tcPlayer,
     OverlayComponent: ThinkingCapOverlay,
   },
 ];
@@ -24,6 +24,7 @@ export default function ProjectsPage() {
         <div className="content-body">
           {PROJECTS.map(({ name, desc, img, OverlayComponent }) => (
             <Project
+              key={name}
               name={name}
               desc={desc}
               img={img}

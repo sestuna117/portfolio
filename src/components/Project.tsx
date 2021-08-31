@@ -51,12 +51,11 @@ export default function Project(props: PropsWithChildren<LinkDetail>) {
           }}
         />
       </div>
-      {overlayOn ? (
-        <Overlay
-          OverlayComponent={OverlayComponent}
-          setDisplay={setOverlayOn}
-        />
-      ) : null}
+      <Overlay
+        OverlayComponent={OverlayComponent}
+        display={overlayOn}
+        setDisplay={setOverlayOn}
+      />
     </div>
   );
 }

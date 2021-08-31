@@ -12,7 +12,6 @@
 }
 
 .project-preview {
-    background: #946adc;
     width: 45%;
     transition: transform 0.3s ease-in-out;
 }
@@ -51,4 +50,16 @@
 .learn-more-arrow {
     position: relative;
     top: 2px
+}
+
+.project-ex, .project-ex-mobile {
+    margin-top: 10px;
+}
+
+.project-ex {
+    width: 80%;
+}
+
+.project-ex-mobile {
+    height: 400px;
 }

@@ -75,7 +75,7 @@ export default function AboutPage() {
                 <h4 className="about-ed-course-header">Relevant Coursework:</h4>
                 <ul className="about-ed-course-list">
                   {SBU_COURSE_LIST.map(({ id, name }) => (
-                    <li>{id + " " + name}</li>
+                    <li key={name}>{id + " " + name}</li>
                   ))}
                 </ul>
               </div>
