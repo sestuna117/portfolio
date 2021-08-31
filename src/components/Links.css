@@ -1,6 +1,11 @@
 .links-container {
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .link-linkedin, .link-steam, .link-github {
