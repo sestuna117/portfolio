@@ -22,9 +22,21 @@ export default function Overlay(props: PropsWithChildren<OverlayParts>) {
         unmountOnExit
         classNames="alert"
       >
-        <div className="overlay">
-          <ImCross className="overlay-exit" onClick={() => setDisplay(false)} />
-          {OverlayComponent}
+        <div className="overlay-space">
+          <div className="overlay">
+            <ImCross
+              className="overlay-exit"
+              onClick={() => setDisplay(false)}
+            />
+            {OverlayComponent}
+            <button
+              className="overlay-exit-button"
+              type={"button"}
+              onClick={() => setDisplay(false)}
+            >
+              Close Project
+            </button>
+          </div>
         </div>
       </CSSTransition>
     </div>

@@ -1,4 +1,4 @@
-.overlay {
+.overlay-space {
     position: absolute;
     margin: auto;
     top: 0;
@@ -12,10 +12,28 @@
     align-items: center;
 }
 
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: #282c34;
+    border-radius: 10px;
+    width: 80%;
+    margin-top: 100px;
+    overflow: scroll;
+    overflow-x: auto;
+    padding-top: 20px;
+}
+
+.overlay::-webkit-scrollbar {
+    width: 0;
+}
+
 .overlay-exit {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
 }
 
 .overlay-exit:hover {
@@ -26,24 +44,27 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: #282c34;
-    border-radius: 10px;
-    width: 80%;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    overflow: scroll;
-    overflow-x: auto;
 }
 
-.overlay-content::-webkit-scrollbar {
-    width: 0;
+.overlay-exit-button {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    color: #f8f8f8;
+    margin: 20px;
+    font-size: 18px;
+    background-color: #946adc;
+    border: none;
+}
+
+.overlay-exit-button:hover {
+    cursor: pointer;
 }
 
 .alert-enter {
     opacity: 0;
 }
 
-.alert-enter .overlay-content {
+.alert-enter .overlay {
     transform: scale(0.9);
 }
 
@@ -54,7 +75,7 @@
     transition: opacity 300ms, transform 300ms;
 }
 
-.alert-enter-active .overlay-content {
+.alert-enter-active .overlay {
     opacity: 1;
     transform: translateX(0);
     transition: opacity 300ms, transform 300ms;
