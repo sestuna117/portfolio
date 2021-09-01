@@ -31,8 +31,8 @@ export default function HomePage() {
             <img className="home-images" src={Collage} alt={"artwork_prev"} />
           </div>
         </div>
-        <Links />
       </div>
+      <Links />
     </div>
   );
 }

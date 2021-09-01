@@ -2,3 +2,30 @@
     text-decoration: none;
     color: #946adc;
 }
+
+.contact-content {
+    display: flex;
+    align-items: center;
+}
+
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.contact-image-container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-image {
+    opacity: 0.3;
+    width: 100%;
+    animation-fill-mode: both;
+}

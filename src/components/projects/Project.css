@@ -7,7 +7,7 @@
     height: 400px;
 }
 
-.project-preview:hover, .project-name:hover, .project-desc p:hover {
+.project-preview:hover, .project-name:hover, .project-desc p:hover, .project-logo:hover {
     cursor: pointer;
 }
 
