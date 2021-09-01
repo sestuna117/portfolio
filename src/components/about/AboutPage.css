@@ -1,3 +1,11 @@
+.about-page .content-page {
+    width: 70%;
+}
+
+.about-page .content-body p {
+    font-size: 16px;
+}
+
 .about-skills-list {
     column-count: 3;
     column-width: 180px;

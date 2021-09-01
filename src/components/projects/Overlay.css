@@ -1,0 +1,114 @@
+.overlay-space {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: #282c34;
+    border-radius: 10px;
+    width: 80%;
+    margin: 60px;
+    overflow: scroll;
+    overflow-x: auto;
+    padding-top: 20px;
+}
+
+.overlay::-webkit-scrollbar {
+    width: 0;
+}
+
+.overlay-exit {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.overlay-exit:hover {
+    cursor: pointer;
+}
+
+.overlay-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overlay-content p {
+    text-align: center;
+    width: 80%;
+}
+
+.overlay-exit-button {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    color: #f8f8f8;
+    margin: 20px;
+    font-size: 18px;
+    background-color: #946adc;
+    border: none;
+}
+
+.overlay-exit-button:hover {
+    cursor: pointer;
+}
+
+.alert-enter {
+    opacity: 0;
+}
+
+.alert-enter .overlay {
+    transform: scale(0.9);
+}
+
+.alert-enter-active {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.alert-enter-active .overlay {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.alert-enter-done {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.alert-exit {
+    opacity: 1;
+}
+
+.alert-exit-active {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.alert-exit-active .overlay {
+    transform: scale(0.9);
+    transition: transform 300ms;
+}
+
+.overlay-content .project-title, .overlay-content .project-summary {
+    margin: 5px;
+}
+
+.overlay-content .project-logo {
+    width: 200px;
+}

@@ -1,0 +1,42 @@
+.home-page p {
+    margin: 5px 10px 5px 40px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+}
+
+.home-text, .home-images-container {
+    width: 50%;
+}
+
+.home-intro {
+    font-size: 30px;
+}
+
+.home-title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.home-status {
+    font-size: 20px;
+}
+
+.home-page .learn-more {
+    margin-left: 50px;
+}
+
+.home-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-images {
+    opacity: 0.8;
+    width: 100%;
+    animation-fill-mode: both;
+}
