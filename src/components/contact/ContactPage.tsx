@@ -20,8 +20,7 @@ export default function ContactPage() {
           <div className="contact-content">
             <div className="contact-text">
               <p>
-                If you have any questions or inquiries, you can fill out the
-                form below or by emailing{" "}
+                If you have any questions or inquiries, you can email me at {" "}
                 <a className="email-link" href="mailto:jasguo.biz@gmail.com">
                   jasguo.biz@gmail.com
                 </a>
