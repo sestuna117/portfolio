@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Links from "../Links";
 import "./ContactPage.css";
 import Collage from "../../imgs/pictures/collage.png";
 import { HiOutlineMail } from "react-icons/all";
 
 export default function ContactPage() {
+
+  useEffect(() => {
+    document.title= "Contact";
+  },[])
+
   return (
     <div className="contact-page">
       <div className="content-page">
@@ -17,12 +22,12 @@ export default function ContactPage() {
               <p>
                 If you have any questions or inquiries, you can fill out the
                 form below or by emailing{" "}
-                <a className="email-link" href="mailto: shiochio@gmail.com">
-                  shiochio@gmail.com
-                </a>{" "}
-                (do not click, example email atm). Let's talk.
+                <a className="email-link" href="mailto:jasguo.biz@gmail.com">
+                  jasguo.biz@gmail.com
+                </a>
+                . Let's talk.
               </p>
-              <a className="link link-mail" href="mailto: shiochio@gmail.com">
+              <a className="link link-mail" href="mailto:jasguo.biz@gmail.com">
                 <HiOutlineMail className="link-icon" />
               </a>
             </div>
