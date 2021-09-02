@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "../Page.css";
 import "./ProjectsPage.css";
 import tcPlayer from "../../imgs/thinking-cap/tc-player.png";
@@ -17,6 +17,11 @@ const PROJECTS = [
 ];
 
 export default function ProjectsPage() {
+
+  useEffect(() => {
+    document.title= "Projects";
+  },[])
+
   return (
     <div className="project-page">
       <div className="content-page">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../Page.css";
 import "./AboutPage.css";
 
@@ -24,6 +24,11 @@ const SBU_COURSE_LIST: { id: string; name: string }[] = [
 ];
 
 export default function AboutPage() {
+
+  useEffect(() => {
+    document.title= "About Me";
+  },[])
+
   return (
     <div className="about-page">
       <div className="content-page">

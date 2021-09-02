@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { IoIosArrowForward } from "react-icons/all";
 import { NavLink } from "react-router-dom";
 import "./HomePage.css";
@@ -6,6 +6,11 @@ import Links from "../Links";
 import Collage from "../../imgs/pictures/collage.png";
 
 export default function HomePage() {
+
+  useEffect(() => {
+    document.title= "Home";
+  },[])
+
   return (
     <div className="home-page">
       <div className="content-page">
