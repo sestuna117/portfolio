@@ -13,10 +13,13 @@ import tcLogo from "../../../imgs/thinking-cap/tc-logo.png"
 export default function ThinkingCapOverlay() {
   return (
     <div className="overlay-content">
-        <img className="project-logo" src={tcLogo} alt={"Thinking Cap Logo"}/>
+      <img className="project-logo" src={tcLogo} alt={"Thinking Cap Logo"} />
       <p className="project-title">Thinking Cap</p>
       <p className="project-summary">
         A League of Legends stats tracker using Riots API
+      </p>
+      <p className="project-summary">
+        Made using: React, Typescript, Node.js, Express, & Recharts
       </p>
       <p className="project-summary">
         Given a summoners (players) name, you will be able to see their level,

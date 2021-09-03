@@ -31,7 +31,7 @@
 }
 
 .about-ed-school-header h4 {
-    margin: 0 0 0 10px;
+    margin: 0 10px;
 }
 
 .about-ed-course-header {
@@ -43,4 +43,14 @@
 
 .about-ed-course-list, .about-ed-school-header span {
     font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .about-page .content-page {
+        width: 90%;
+    }
+
+    .about-page .content-body p {
+        margin-top: 0;
+    }
 }

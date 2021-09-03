@@ -29,3 +29,17 @@
     width: 100%;
     animation-fill-mode: both;
 }
+
+@media screen and (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-text, .contact-image-container {
+        width: 100%;
+    }
+
+    .contact-image {
+        width: 90%;
+    }
+}

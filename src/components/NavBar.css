@@ -1,5 +1,5 @@
 .nav-bar {
-    background: #111;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,14 +12,96 @@
     font-size: 40px;
     font-weight: bold;
     color: #946adc;
+    padding: 0;
 }
 
 .nav-bar-list {
+    position: relative;
     height: 40px;
     display: flex;
     align-items: center;
     list-style-type: none;
-    margin: 0;
     padding: 0;
     z-index: 0;
+    margin: 0 20px 0 0;
+}
+
+.nav-bar-dropdown {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.nav-bar-dropdown:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-bar {
+        flex-wrap: wrap;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+    }
+
+    .nav-bar-primary {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: #111;
+        box-shadow: 0 2px 5px 0 rgba(171, 171, 171, 0.2)
+    }
+
+    .nav-bar-dropdown {
+        display: block;
+    }
+
+    .nav-bar-list {
+        width: 100%;
+        height: unset;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    @keyframes slide-in {
+        0% {
+            transform: translate3d(-500px, 0, 0)
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .nav-bar-name {
+        font-size: 25px;
+        margin: 6px 5px 6px 20px;
+    }
+}
+
+.nav-bar-mobile .navbar-list-enter  {
+    opacity: 0;
+    transform: translateX(-500px);
+}
+
+.nav-bar-mobile .navbar-list-enter-active {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.nav-bar-mobile .navbar-list-enter-done {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-bar-mobile .navbar-list-exit {
+    opacity: 1;
+}
+
+.nav-bar-mobile .navbar-list-exit-active {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: opacity 300ms, transform 300ms;
 }
