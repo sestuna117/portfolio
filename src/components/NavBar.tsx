@@ -10,7 +10,6 @@ import OutsideAlerter from "./ClickOffHandler";
 export default function NavBar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  console.log(isMobile);
 
   function resizeScreen() {
     setIsMobile(window.innerWidth <= 768);
@@ -27,7 +26,7 @@ export default function NavBar() {
   }, [isMobile]);
 
   return (
-    <OutsideAlerter setDisplay={setDropdownOpen}>
+    <OutsideAlerter setDisplay={setDropdownOpen} isMobile={isMobile}>
       <nav className={classNames("nav-bar", { "nav-bar-mobile": isMobile })}>
         <NavLink
           exact={true}

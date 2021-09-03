@@ -11,7 +11,6 @@ export type OverlayParts = {
 
 export default function Overlay(props: PropsWithChildren<OverlayParts>) {
   const { display, setDisplay, OverlayComponent } = props;
-  console.log(display);
 
   return (
     <div>

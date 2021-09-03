@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 
 export type DisplayHandler = {
   setDisplay: Dispatch<SetStateAction<boolean>>;
+  isMobile: boolean;
 };
 
 /**
@@ -16,14 +17,15 @@ export type DisplayHandler = {
  */
 function useOutsideAlerter(
   ref: React.MutableRefObject<any>,
-  setDisplay: Dispatch<SetStateAction<boolean>>
+  setDisplay: Dispatch<SetStateAction<boolean>>,
+  isMobile: boolean
 ) {
   useEffect(() => {
     /**
      * Alert if clicked on outside of element
      */
     function handleClickOutside(event: { target: any }) {
-      if (ref.current && !ref.current.contains(event.target)) {
+      if (ref.current && !ref.current.contains(event.target) && isMobile) {
         setDisplay(false);
       }
     }
@@ -33,16 +35,16 @@ function useOutsideAlerter(
       // Unbind the event listener on clean up
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [ref]);
+  }, [isMobile, ref, setDisplay]);
 }
 
 /**
  * Component that alerts if you click outside of it
  */
 function OutsideAlerter(props: PropsWithChildren<DisplayHandler>) {
-  const { setDisplay } = props;
+  const { setDisplay, isMobile } = props;
   const wrapperRef = useRef(null);
-  useOutsideAlerter(wrapperRef, setDisplay);
+  useOutsideAlerter(wrapperRef, setDisplay, isMobile);
 
   return <div ref={wrapperRef}>{props.children}</div>;
 }
