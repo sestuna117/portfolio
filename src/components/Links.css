@@ -1,16 +1,13 @@
 .links-container {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 30px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
     animation: fade-in 0.5s linear;
     animation-fill-mode: both;
     -webkit-animation: fade-in 0.5s linear;
     -webkit-animation-fill-mode: both;
+    margin: 20px auto 20px;
 }
 
 @keyframes fade-in {

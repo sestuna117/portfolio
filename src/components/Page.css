@@ -60,6 +60,10 @@
 
 @media only screen and (max-width: 768px) {
     .content-page {
-        margin-top: 60px;
+        margin-top: 70px;
+    }
+
+    .content-body {
+        margin-top: 0;
     }
 }

@@ -28,18 +28,20 @@ export default function NavBar() {
   return (
     <OutsideAlerter setDisplay={setDropdownOpen} isMobile={isMobile}>
       <nav className={classNames("nav-bar", { "nav-bar-mobile": isMobile })}>
-        <NavLink
-          exact={true}
-          className="nav-link nav-bar-name"
-          to="/"
-          activeClassName="selected"
-        >
-          Jason Guo
-        </NavLink>
-        <GiHamburgerMenu
-          className="nav-bar-dropdown"
-          onClick={() => setDropdownOpen((prev) => !prev)}
-        />
+        <div className="nav-bar-primary">
+          <NavLink
+            exact={true}
+            className="nav-link nav-bar-name"
+            to="/"
+            activeClassName="selected"
+          >
+            Shio Chio
+          </NavLink>
+          <GiHamburgerMenu
+            className="nav-bar-dropdown"
+            onClick={() => setDropdownOpen((prev) => !prev)}
+          />
+        </div>
         <CSSTransition
           in={dropdownOpen}
           timeout={300}
@@ -47,11 +49,7 @@ export default function NavBar() {
           unmountOnExit
           classNames="navbar-list"
         >
-          <ul
-            className={classNames("nav-bar-list", {
-              "nav-bar-list-active": dropdownOpen,
-            })}
-          >
+          <ul className="nav-bar-list">
             <NavBarLink
               exact={true}
               to={"/"}

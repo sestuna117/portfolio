@@ -40,3 +40,31 @@
     width: 100%;
     animation-fill-mode: both;
 }
+
+@media screen and (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+    }
+
+    .home-text, .home-images-container {
+        width: 100%;
+    }
+
+    .home-images {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .home-intro {
+        font-size: 25px;
+    }
+
+    .home-title {
+        font-size: 30px;
+    }
+
+    .home-status {
+        font-size: 18px;
+    }
+}

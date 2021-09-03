@@ -112,3 +112,17 @@
 .overlay-content .project-logo {
     width: 200px;
 }
+
+@media screen and (max-width: 768px) {
+    .overlay-space {
+        height: unset;
+    }
+
+    .overlay {
+        margin-top: 65px;
+    }
+
+    .overlay-content p, .overlay {
+        width: 90%;
+    }
+}
