@@ -65,42 +65,42 @@
     cursor: pointer;
 }
 
-.alert-enter {
+.overlay-on-enter {
     opacity: 0;
 }
 
-.alert-enter .overlay {
+.overlay-on-enter .overlay {
     transform: scale(0.9);
 }
 
-.alert-enter-active {
+.overlay-on-enter-active {
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 1;
     transform: translateX(0);
     transition: opacity 300ms, transform 300ms;
 }
 
-.alert-enter-active .overlay {
+.overlay-on-enter-active .overlay {
     opacity: 1;
     transform: translateX(0);
     transition: opacity 300ms, transform 300ms;
 }
 
-.alert-enter-done {
+.overlay-on-enter-done {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.alert-exit {
+.overlay-on-exit {
     opacity: 1;
 }
 
-.alert-exit-active {
+.overlay-on-exit-active {
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
     transition: opacity 300ms;
 }
 
-.alert-exit-active .overlay {
+.overlay-on-exit-active .overlay {
     transform: scale(0.9);
     transition: transform 300ms;
 }

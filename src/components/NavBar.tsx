@@ -1,26 +1,87 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBarLink from "./NavBarLink";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/all";
+import classNames from "classnames";
+import { CSSTransition } from "react-transition-group";
+import OutsideAlerter from "./ClickOffHandler";
 
 export default function NavBar() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  console.log(isMobile);
+
+  function resizeScreen() {
+    setIsMobile(window.innerWidth <= 768);
+  }
+
+  window.addEventListener("resize", resizeScreen);
+
+  useEffect(() => {
+    if (!isMobile) {
+      setDropdownOpen(true);
+    } else {
+      setDropdownOpen(false);
+    }
+  }, [isMobile]);
+
   return (
-    <nav className="nav-bar">
-      <NavLink
-        exact={true}
-        className="nav-link nav-bar-name"
-        to="/"
-        activeClassName="selected"
-      >
-        Shio Chio
-      </NavLink>
-      <ul className="nav-bar-list">
-        {/*<NavBarLink exact={true} to={"/"} name={"Home"} />*/}
-        <NavBarLink to={"/about"} name={"About Me"} />
-        <NavBarLink to={"/projects"} name={"Projects"} />
-        {/*<NavBarLink to={"/resume"} name={"Resume"} />*/}
-        <NavBarLink to={"/contact"} name={"Contact"} />
-      </ul>
-    </nav>
+    <OutsideAlerter setDisplay={setDropdownOpen}>
+      <nav className={classNames("nav-bar", { "nav-bar-mobile": isMobile })}>
+        <NavLink
+          exact={true}
+          className="nav-link nav-bar-name"
+          to="/"
+          activeClassName="selected"
+        >
+          Jason Guo
+        </NavLink>
+        <GiHamburgerMenu
+          className="nav-bar-dropdown"
+          onClick={() => setDropdownOpen((prev) => !prev)}
+        />
+        <CSSTransition
+          in={dropdownOpen}
+          timeout={300}
+          mountOnEnter
+          unmountOnExit
+          classNames="navbar-list"
+        >
+          <ul
+            className={classNames("nav-bar-list", {
+              "nav-bar-list-active": dropdownOpen,
+            })}
+          >
+            <NavBarLink
+              exact={true}
+              to={"/"}
+              name={"Home"}
+              setDisplay={setDropdownOpen}
+              isMobile={isMobile}
+            />
+            <NavBarLink
+              to={"/about"}
+              name={"About Me"}
+              setDisplay={setDropdownOpen}
+              isMobile={isMobile}
+            />
+            <NavBarLink
+              to={"/projects"}
+              name={"Projects"}
+              setDisplay={setDropdownOpen}
+              isMobile={isMobile}
+            />
+            {/*<NavBarLink to={"/resume"} name={"Resume"} setDisplay={setDropdownOpen} />*/}
+            <NavBarLink
+              to={"/contact"}
+              name={"Contact"}
+              setDisplay={setDropdownOpen}
+              isMobile={isMobile}
+            />
+          </ul>
+        </CSSTransition>
+      </nav>
+    </OutsideAlerter>
   );
 }

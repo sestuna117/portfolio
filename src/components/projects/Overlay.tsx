@@ -20,7 +20,7 @@ export default function Overlay(props: PropsWithChildren<OverlayParts>) {
         timeout={300}
         mountOnEnter
         unmountOnExit
-        classNames="alert"
+        classNames="overlay-on"
       >
         <div className="overlay-space">
           <div className="overlay">

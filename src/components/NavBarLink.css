@@ -7,10 +7,6 @@
     z-index: 1;
 }
 
-.nav-link-item:last-child {
-    margin-right: 20px;
-}
-
 .nav-link-item::before {
     position: absolute;
     border-radius: 20px;
@@ -46,4 +42,20 @@
 
 .nav-bar-list .selected {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-link-item {
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 10px 10px 0 rgba(171, 171, 171, 0.2)
+    }
+
+    .nav-link-item::before {
+        display: none;
+    }
+
+    .nav-link-item:last-child {
+
+    }
 }
