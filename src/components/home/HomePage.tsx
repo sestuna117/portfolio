@@ -16,11 +16,11 @@ export default function HomePage() {
       <div className="content-page">
         <div className="home-content">
           <div className={"home-text"}>
-            <p className={"home-intro"}>Hi, my name is Shio Chio.</p>
+            <p className={"home-intro"}>Hi, my name is Jason Guo.</p>
             <p className={"home-title"}>Aspiring Web Developer</p>
             <p className={"home-status"}>
               Currently a university student at Stony Brook University working
-              towards Bachelors Degree in Computer Science.
+              towards a Bachelors Degree in Computer Science.
             </p>
             <NavLink
               className="nav-link"
