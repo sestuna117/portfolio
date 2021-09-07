@@ -79,6 +79,14 @@
     }
 }
 
+@media only screen and (max-height: 238px) {
+    .nav-bar-list {
+        height: calc(100vh - 30px);
+        overflow: auto;
+        overflow-x: hidden;
+    }
+}
+
 .nav-bar-mobile .navbar-list-enter  {
     opacity: 0;
     transform: translateX(-500px);
