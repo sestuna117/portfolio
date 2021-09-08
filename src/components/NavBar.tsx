@@ -35,7 +35,7 @@ export default function NavBar() {
             to="/"
             activeClassName="selected"
           >
-            Jason Guo
+            Shio Chio
           </NavLink>
           <GiHamburgerMenu
             className="nav-bar-dropdown"
