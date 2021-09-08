@@ -7,7 +7,7 @@ export default function Links() {
     <div className="links-container">
       <a
         className="link link-linkedin"
-        href={"#"}
+        href={"https://www.linkedin.com/in/jason-guo-925014204/"}
         target={"_blank"}
         rel="noreferrer"
       >
