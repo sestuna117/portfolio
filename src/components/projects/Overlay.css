@@ -113,6 +113,10 @@
     width: 200px;
 }
 
+.overlay-content .project-logo:hover{
+    cursor: auto;
+}
+
 @media screen and (max-width: 768px) {
     .overlay-space {
         height: unset;
