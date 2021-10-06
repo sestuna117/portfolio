@@ -75,7 +75,7 @@ export default function AboutPage() {
         </div>
         <div className="content-body">
           <ul className="about-ed-list">
-            <li>
+            <li className="school-item">
               <div className="about-ed-header">
                 <div className="about-ed-school-header">
                   <h4>Stony Brook University</h4>
@@ -93,6 +93,18 @@ export default function AboutPage() {
                     <li key={name}>{id + " " + name}</li>
                   ))}
                 </ul>
+              </div>
+            </li>
+            <li className="school-item">
+              <div className="about-ed-header">
+                <div className="about-ed-school-header">
+                  <h4>Dutchess Community College</h4>
+                  <span>2018 - 2020</span>
+                </div>
+                <div className="about-ed-school-header">
+                  <h4>Computer Science, A.S.</h4>
+                  <span>Poughkeepsie, NY</span>
+                </div>
               </div>
             </li>
           </ul>

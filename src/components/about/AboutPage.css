@@ -20,6 +20,10 @@
     list-style: none;
 }
 
+.school-item {
+    margin-bottom: 40px;
+}
+
 .about-ed-school-header {
     display: flex;
     justify-content: space-between;
