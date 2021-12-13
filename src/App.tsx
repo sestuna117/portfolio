@@ -10,7 +10,6 @@ import ContactPage from "./components/contact/ContactPage";
 function App() {
   return (
     <Router>
-      <div>
         <NavBar />
         <Switch>
           <Route path="/about">
@@ -26,7 +25,6 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
-      </div>
     </Router>
   );
 }
