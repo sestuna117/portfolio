@@ -20,6 +20,9 @@ const SBU_COURSE_LIST: { id: string; name: string }[] = [
   { id: "CSE 215", name: "Foundation of Comp Science" },
   { id: "CSE 216", name: "Programming Abstractions" },
   { id: "CSE 220", name: "System Fundamentals I" },
+  { id: "CSE 310", name: "Computer Networks" },
+  { id: "CSE 316", name: "Software Development" },
+  { id: "CSE 331", name: "Computer Security Fundamentals" },
   { id: "CSE 373", name: "Analysis of Algorithms" },
 ];
 

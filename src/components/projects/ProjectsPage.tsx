@@ -3,7 +3,10 @@ import "../Page.css";
 import "./ProjectsPage.css";
 import tcPlayer from "../../imgs/thinking-cap/tc-player.png";
 import tcLogo from "../../imgs/thinking-cap/tc-logo.png";
+import tttCard from "../../imgs/triple-triad-tracker/tttCard.png";
+import blankLogo from "../../imgs/pictures/blank.png";
 import ThinkingCapOverlay from "./project-overlays/ThinkingCapOverlay";
+import TripleTriadOverlay from "./project-overlays/TripleTriadOverlay";
 import Project from "./Project";
 
 const PROJECTS = [
@@ -13,6 +16,13 @@ const PROJECTS = [
     logo: tcLogo,
     img: tcPlayer,
     OverlayComponent: ThinkingCapOverlay,
+  },
+  {
+    name: "Triple Triad Tracker (Work in Progress)",
+    desc: "A Final Fantasy XIV card tracker for the game Triple Triad",
+    logo: blankLogo,
+    img: tttCard,
+    OverlayComponent: TripleTriadOverlay,
   },
 ];
 
