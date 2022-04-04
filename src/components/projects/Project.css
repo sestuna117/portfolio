@@ -1,3 +1,7 @@
+.project-box:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
 .project-box {
     margin: 50px 0;
     display: flex;
@@ -72,6 +76,10 @@
     .project-box {
         flex-direction: column;
         height: unset;
+    }
+
+    .project-box:nth-child(even) {
+        flex-direction: column;
     }
 
     .project-desc, .project-preview {

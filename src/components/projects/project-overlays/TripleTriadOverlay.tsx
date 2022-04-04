@@ -21,7 +21,7 @@ export default function ThinkingCapOverlay() {
       <p className="project-summary">
         Allows users to look up information about a Triple Triad card, opponents
         and purchasable card packs in game. Inspiration for the design is taken
-        after LodestoneWhile no searchable features are currently available, I
+        after Lodestone. While no searchable features are currently available, I
         plan to later implement them along with user specific interactions.
       </p>
       <img className="project-ex" src={tttCard} alt={"Card"} />
