@@ -16,52 +16,50 @@ export default function Project(props: PropsWithChildren<LinkDetail>) {
   const [overlayOn, setOverlayOn] = useState(false);
 
   return (
-    <div>
-      <div className="project-box">
-        <div className="project-desc">
-          <img
-            className="project-logo"
-            src={logo}
-            alt={name}
-            onClick={() => {
-              setOverlayOn(true);
-            }}
-          />
-          <div
-            className="project-name"
-            onClick={() => {
-              setOverlayOn(true);
-            }}
-          >
-            {name}
-          </div>
-          <div className="project-summary">
-            <p
-              onClick={() => {
-                setOverlayOn(true);
-              }}
-            >
-              {desc}
-            </p>
-            <p
-              className="learn-more"
-              onClick={() => {
-                setOverlayOn(true);
-              }}
-            >
-              Learn More{<IoIosArrowForward className="learn-more-arrow" />}
-            </p>
-          </div>
-        </div>
+    <div className="project-box">
+      <div className="project-desc">
         <img
-          className="project-preview"
-          src={img}
+          className="project-logo"
+          src={logo}
           alt={name}
           onClick={() => {
             setOverlayOn(true);
           }}
         />
+        <div
+          className="project-name"
+          onClick={() => {
+            setOverlayOn(true);
+          }}
+        >
+          {name}
+        </div>
+        <div className="project-summary">
+          <p
+            onClick={() => {
+              setOverlayOn(true);
+            }}
+          >
+            {desc}
+          </p>
+          <p
+            className="learn-more"
+            onClick={() => {
+              setOverlayOn(true);
+            }}
+          >
+            Learn More{<IoIosArrowForward className="learn-more-arrow" />}
+          </p>
+        </div>
       </div>
+      <img
+        className="project-preview"
+        src={img}
+        alt={name}
+        onClick={() => {
+          setOverlayOn(true);
+        }}
+      />
       <Overlay
         OverlayComponent={OverlayComponent}
         display={overlayOn}
