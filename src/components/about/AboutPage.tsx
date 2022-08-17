@@ -74,6 +74,36 @@ export default function AboutPage() {
           </ul>
         </div>
         <div className="content-header">
+          <h2 className="content-header-name">Experience</h2>
+        </div>
+        <div className="content-body">
+          <ul className="about-ed-list">
+            <li className="school-item">
+              <div className="about-ed-header">
+                <div className="about-ed-school-header">
+                  <h4>IBM</h4>
+                  <span>May 2022 - August 2022</span>
+                </div>
+                <div className="about-ed-school-header">
+                  <h4>Front End Developer Intern</h4>
+                  <span>Southbury, CT</span>
+                </div>
+              </div>
+              <div>
+                <h4 className="about-ed-course-header">Description</h4>
+                <ul className="about-ed-course-list">
+                  <li>Worked in Agile team to develop internal ledger web application used within the company.</li>
+                  <li>Developed new landing page for web application to be used by thousands of IBMers.</li>
+                  <li>Participated in IBM's Be(e) Innovative Intern Challenge and collaborated on a
+                    team with 4 other interns to create and design an IT solution to combat food and
+                    plastic waste
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className="content-header">
           <h2 className="content-header-name">Education</h2>
         </div>
         <div className="content-body">
