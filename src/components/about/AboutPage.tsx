@@ -1,6 +1,10 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "../Page.css";
 import "./AboutPage.css";
+import resume from "../../links/resume.pdf";
+import user_instructions from "../../links/user_instructions.pdf";
+import press_release from "../../links/press_release.pdf";
+import cover_letter from "../../links/cover-letter.pdf";
 
 const SKILLS_LIST = [
   "Java",
@@ -11,6 +15,7 @@ const SKILLS_LIST = [
   "Node.js",
   "Rest API",
   "Ocaml",
+  "Ruby",
   "MIPS Assembly",
   "Github",
 ];
@@ -20,17 +25,26 @@ const SBU_COURSE_LIST: { id: string; name: string }[] = [
   { id: "CSE 215", name: "Foundation of Comp Science" },
   { id: "CSE 216", name: "Programming Abstractions" },
   { id: "CSE 220", name: "System Fundamentals I" },
+  { id: "CSE 300", name: "Technical Communications" },
   { id: "CSE 310", name: "Computer Networks" },
   { id: "CSE 316", name: "Software Development" },
   { id: "CSE 331", name: "Computer Security Fundamentals" },
+  { id: "CSE 337", name: "Scripting Languages" },
   { id: "CSE 373", name: "Analysis of Algorithms" },
+  { id: "CSE 416", name: "Software Engineering" },
+];
+
+const CSE_300_WRITING_ASSIGNMENTS: { title: string; link: string }[] = [
+  { title: "Resume", link: resume },
+  { title: "Cover Letter", link: cover_letter },
+  { title: "User Instructions", link: user_instructions },
+  { title: "Press Release", link: press_release },
 ];
 
 export default function AboutPage() {
-
   useEffect(() => {
-    document.title= "About Me";
-  },[])
+    document.title = "About Me";
+  }, []);
 
   return (
     <div className="about-page">
@@ -92,11 +106,18 @@ export default function AboutPage() {
               <div>
                 <h4 className="about-ed-course-header">Description</h4>
                 <ul className="about-ed-course-list">
-                  <li>Worked in Agile team to develop internal ledger web application used within the company.</li>
-                  <li>Developed new landing page for web application to be used by thousands of IBMers.</li>
-                  <li>Participated in IBM's Be(e) Innovative Intern Challenge and collaborated on a
-                    team with 4 other interns to create and design an IT solution to combat food and
-                    plastic waste
+                  <li>
+                    Worked in Agile team to develop internal ledger web
+                    application used within the company.
+                  </li>
+                  <li>
+                    Developed new landing page for web application to be used by
+                    thousands of IBMers.
+                  </li>
+                  <li>
+                    Participated in IBM's Be(e) Innovative Intern Challenge and
+                    collaborated on a team with 4 other interns to create and
+                    design an IT solution to combat food and plastic waste
                   </li>
                 </ul>
               </div>
@@ -123,7 +144,26 @@ export default function AboutPage() {
                 <h4 className="about-ed-course-header">Relevant Coursework:</h4>
                 <ul className="about-ed-course-list">
                   {SBU_COURSE_LIST.map(({ id, name }) => (
-                    <li key={name}>{id + " " + name}</li>
+                    <li key={name}>
+                      {id + " " + name}
+                      {id === "CSE 300" && (
+                        <ul>
+                          {CSE_300_WRITING_ASSIGNMENTS.map(
+                            ({ title, link }) => (
+                              <li>
+                                <a
+                                  className="ed-resource-link"
+                                  href={link}
+                                  target="_blank"
+                                >
+                                  {title}
+                                </a>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      )}
+                    </li>
                   ))}
                 </ul>
               </div>
